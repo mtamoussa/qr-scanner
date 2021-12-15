@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head></head>
+<style>
+    video {
+        width: 100%;
+    }
+</style>
 <body>
     <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
     <canvas id="canvas" hidden></canvas>
@@ -56,7 +61,7 @@
                     outputMessage.hidden = true;
                     outputData.parentElement.hidden = false;
                     outputData.innerText = code.data;
-                    // window.ReactNativeWebView.postMessage(scanQRCode());
+                    window.ReactNativeWebView.postMessage(code.data);
                 } else {
                     outputMessage.hidden = false;
                     outputData.parentElement.hidden = true;
